@@ -8,6 +8,7 @@ import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
@@ -79,6 +80,8 @@ public abstract class BaseActivity extends AppCompatActivity implements StateVie
         view = getLayoutInflater().inflate(R.layout.activity_base, null);
 
         linearLayoutbarshoworhide = view.findViewById(R.id.basetitle_show_or_hide);
+//        LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, height);
+//        linearLayoutbarshoworhide.setLayoutParams(params);
 
 //        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(linearLayoutbarshoworhide.getLayoutParams());
 //        lp.setMargins(0, height, 0, 0);

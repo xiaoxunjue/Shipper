@@ -39,7 +39,6 @@ public class ImproveDriverInformationActivity extends BaseActivity {
     private DriverItemImageSelectAdapter driverItemImageSelectAdapter;
 
     @Override
-
     public int getContentViewResId() {
         return R.layout.activity_improvedriverinfo;
     }

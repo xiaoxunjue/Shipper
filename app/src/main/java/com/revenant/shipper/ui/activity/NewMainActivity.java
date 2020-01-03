@@ -14,9 +14,11 @@ import com.google.android.material.tabs.TabLayout;
 import com.revenant.shipper.R;
 import com.revenant.shipper.adapter.NewMainAdapter;
 import com.revenant.shipper.base.BaseActivity;
+import com.revenant.shipper.bean.AreaBeans;
 import com.revenant.shipper.ui.fragment.AssignmentFragment;
 import com.revenant.shipper.ui.fragment.NetworkingFragment;
 import com.revenant.shipper.ui.fragment.PlatformFragment;
+import com.revenant.shipper.utils.AreaSelect;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -80,7 +82,10 @@ public class NewMainActivity extends BaseActivity {
     @Override
     public void leftbarclick() {
         super.leftbarclick();
+//        startActivity(OrderActivity.class);
         startActivity(OrderActivity.class);
+        AreaBeans areaBean = AreaSelect.getArea(this);
+        LogUtils.d("AAAa" + areaBean.getAreas().getArea());
     }
 
     @Override
