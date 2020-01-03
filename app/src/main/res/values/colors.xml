@@ -15,4 +15,5 @@
     <color name="login_edit_style_activated">#000000</color>
     <color name="login_btn_color">#5B86F9</color>
     <color name="driver_edit_image_bottom_text">#5A85FA</color>
+    <color name="main_tab_indicator_color">#F59A23</color>
 </resources>

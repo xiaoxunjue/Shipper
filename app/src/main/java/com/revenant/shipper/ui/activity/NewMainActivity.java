@@ -139,12 +139,11 @@ public class NewMainActivity extends BaseActivity {
 //
         viewpager.setAdapter(newMainAdapter);
         tablayout.setupWithViewPager(viewpager);
-        initLocation();
-
-        startLocation();
-
-
+//        initLocation();
+//
+//        startLocation();
     }
+
     private void initLocation() {
         locationClient = new AMapLocationClient(this);
         locationOption = getDefaultOption();
@@ -275,6 +274,7 @@ public class NewMainActivity extends BaseActivity {
             locationOption = null;
         }
     }
+
     @Override
     public void leftbarclick() {
         super.leftbarclick();
