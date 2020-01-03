@@ -14,6 +14,11 @@
 
     </com.google.android.material.tabs.TabLayout>
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewareaselect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"
