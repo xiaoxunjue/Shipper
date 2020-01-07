@@ -53,6 +53,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:paddingRight="10dp"
-            android:src="@mipmap/fanhuileft"></ImageView>
+            android:visibility="invisible"
+            android:src="@mipmap/message"></ImageView>
     </FrameLayout>
 </LinearLayout>

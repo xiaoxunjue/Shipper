@@ -1,13 +1,267 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.revenant.shipper.ui.activity.MineActivity">
 
-    <com.revenant.shipper.ui.view.MineBigItem
-        android:id="@+id/TransportOrder"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"></com.revenant.shipper.ui.view.MineBigItem>
-</LinearLayout>
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/bar_bg_color"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/mine_personal_image"
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginLeft="10dp"
+                android:src="@mipmap/tes"></ImageView>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@id/mine_personal_image"
+                android:layout_marginLeft="35dp"
+                android:layout_toRightOf="@id/mine_personal_image">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="15dp"
+                        android:text="132***1356"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"></TextView>
+
+                    <TextView
+                        style="@style/mine_authentication_okstyle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="已认证"></TextView>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <TextView
+                style="@style/mine_authentication_nostyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/mine_personal_image"
+                android:layout_marginLeft="30dp"
+                android:layout_toRightOf="@id/mine_personal_image"
+                android:text="编辑资料 >"></TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:src="@mipmap/minebigback"></ImageView>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            android:background="@color/mine_warn_authentication_color"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="5dp"
+                    android:src="@mipmap/mineauthenticationwarn"></ImageView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="您的资料待完善"
+                    android:textColor="@color/main_tab_indicator_color"></TextView>
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/improve_driver_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="去完善 >"
+                android:textColor="@color/main_tab_indicator_color"></TextView>
+        </RelativeLayout>
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="vertical"
+            app:cardBackgroundColor="@color/white">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/mine_bigitem_titleone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:text="我的钱包"
+                        android:textColor="@color/black"
+                        android:textSize="20sp"
+                        android:textStyle="italic"></TextView>
+
+                    <LinearLayout
+                        android:id="@+id/item_mine_right_click"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:orientation="horizontal"
+                        android:paddingRight="10dp">
+
+                        <TextView
+                            android:id="@+id/mine_bigitem_titletwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="进入钱包 >"></TextView>
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@mipmap/dingdan"
+                            android:visibility="gone"></ImageView>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="0.00元"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="italic"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:drawableRight="@mipmap/hide"
+                            android:gravity="center_vertical"
+                            android:text="余额(元) "
+                            android:textSize="15sp"></TextView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="italic"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="优惠卷"
+                            android:textSize="15sp"></TextView>
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center_horizontal"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="10dp"
+                            android:text="0"
+                            android:textColor="@color/black"
+                            android:textSize="25sp"
+                            android:textStyle="italic"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:text="积分"
+                            android:textSize="15sp"></TextView>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+        <com.revenant.shipper.ui.view.MineBigItem
+            android:id="@+id/TransportOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.revenant.shipper.ui.view.MineBigItem>
+
+        <com.revenant.shipper.ui.view.MineBigItem
+            android:id="@+id/ShipperAssistant"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.revenant.shipper.ui.view.MineBigItem>
+
+        <com.revenant.shipper.ui.view.MineBigItem
+            android:id="@+id/ShipperService"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></com.revenant.shipper.ui.view.MineBigItem>
+
+
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

@@ -9,6 +9,10 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayoutnews"
         android:layout_width="match_parent"
+        app:tabIndicatorFullWidth="false"
+        app:tabBackground="@color/white"
+        app:tabSelectedTextColor="@color/tab_select_news_color"
+        app:tabTextColor="@color/tab_select_news_color"
         android:layout_height="wrap_content">
 
     </com.google.android.material.tabs.TabLayout>

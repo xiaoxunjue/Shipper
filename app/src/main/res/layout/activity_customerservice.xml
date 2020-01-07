@@ -16,7 +16,11 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="自助服务"></TextView>
+            android:paddingLeft="30dp"
+            android:paddingTop="30dp"
+            android:text="自助服务"
+            android:textColor="@color/black"
+            android:textStyle="bold"></TextView>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/custom_service_recyclerview"
@@ -35,8 +39,13 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
+            android:background="@color/bottom_select_text"
             android:gravity="center_horizontal"
-            android:text="在线客服"></TextView>
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="在线客服"
+            android:textColor="@color/white"
+            android:textSize="20sp"></TextView>
 
         <TextView
             android:id="@+id/custom_service_tel"
@@ -44,6 +53,9 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:gravity="center_horizontal"
-            android:text="电话客服"></TextView>
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:text="电话客服"
+            android:textSize="20sp"></TextView>
     </LinearLayout>
 </RelativeLayout>

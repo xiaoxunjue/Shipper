@@ -278,10 +278,17 @@ public class NewMainActivity extends BaseActivity {
     @Override
     public void leftbarclick() {
         super.leftbarclick();
-//        startActivity(OrderActivity.class);
-        startActivity(OrderActivity.class);
-//        AreaBeans areaBean = AreaSelect.getArea(this);
-//        LogUtils.d("AAAa" + areaBean.getAreas().getArea());
+
+        /*
+         * 进入登录页面
+         * */
+//        startActivity(LoginActivity.class);
+        /*
+         * 进入我的页面
+         *
+         * */
+        startActivity(MineActivity.class);
+
     }
 
     @Override

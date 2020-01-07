@@ -178,7 +178,7 @@ public abstract class BaseActivity extends AppCompatActivity implements StateVie
         rightBaseBar.setText(title);
     }
 
-    public void showright(boolean showrightbar) {
+    public void showrighttext(boolean showrightbar) {
         if (showrightbar == true) {
             rightBaseBar.setVisibility(View.VISIBLE);
         } else {

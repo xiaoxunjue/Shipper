@@ -5,6 +5,7 @@ import android.os.Handler;
 import com.revenant.shipper.MainActivity;
 import com.revenant.shipper.R;
 import com.revenant.shipper.ui.activity.NewMainActivity;
+import com.revenant.shipper.ui.activity.NoIdentificationActivity;
 
 public class SplashActivity extends BaseActivity {
 
@@ -28,7 +29,7 @@ public class SplashActivity extends BaseActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(NewMainActivity.class);
+                startActivity(NoIdentificationActivity.class);
                 finish();
             }
         }, 2000);

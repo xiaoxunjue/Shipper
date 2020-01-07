@@ -19,9 +19,11 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
 
                 <TextView
+                    style="@style/suggestionstextstyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="建议类型"></TextView>
@@ -35,9 +37,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
 
                 <TextView
+                    style="@style/suggestionstextstyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="建议内容"></TextView>
@@ -45,6 +50,7 @@
                 <EditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:background="@drawable/suggestions_edit_style"
                     android:gravity="left|top"
                     android:hint="请输入您的宝贵意见"
                     android:lines="5"></EditText>
@@ -53,12 +59,19 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:paddingLeft="10dp">
 
                 <TextView
+                    style="@style/suggestionstextstyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="上传照片0/3"></TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@mipmap/cinema"></ImageView>
             </LinearLayout>
 
             <Button

@@ -31,6 +31,7 @@ import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
 import javax.net.ssl.X509TrustManager;
 
+import cn.jpush.android.api.JPushInterface;
 import okhttp3.OkHttpClient;
 
 public class App extends Application {
@@ -42,6 +43,7 @@ public class App extends Application {
         //设置是否打印日志
         LogUtils.getLogConfig().configAllowLog(true);
         initOkGo();
+        initJpush();
     }
     public static App getApplication() {
         return mContext;
@@ -165,5 +167,13 @@ public class App extends Application {
             //return hostname.equals("server.jeasonlzy.com");
             return true;
         }
+    }
+
+    //初始化极光推送
+    public void    initJpush(){
+        JPushInterface.setDebugMode(true);
+        JPushInterface.init(this);
+        String rid = JPushInterface.getRegistrationID(getApplicationContext());
+        LogUtils.d("AAAAAAA"+rid);
     }
 }

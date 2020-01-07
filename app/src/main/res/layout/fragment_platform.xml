@@ -5,10 +5,22 @@
     android:layout_height="match_parent"
     tools:context=".ui.fragment.PlatformFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="111" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <include layout="@layout/item_show_main_firstview"></include>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview_area_from_to"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewareaselect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
 
 </FrameLayout>

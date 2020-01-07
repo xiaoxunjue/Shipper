@@ -2,7 +2,9 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
 
     <ImageView
         android:id="@+id/customer_item_image"
@@ -11,12 +13,13 @@
         android:layout_gravity="center_horizontal"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@mipmap/tes"></ImageView>
+        android:src="@mipmap/determinated"></ImageView>
 
     <TextView
         android:id="@+id/customer_item_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:text="11111"></TextView>
+        android:layout_marginTop="5dp"
+        android:text="发起投诉"></TextView>
 </LinearLayout>

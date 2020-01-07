@@ -46,10 +46,10 @@ public class CustomerServiceActivity extends BaseActivity {
 
     @Override
     public void initView() {
-        drawableList.add(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_launcher));
-        drawableList.add(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_launcher));
-        drawableList.add(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_launcher));
-        drawableList.add(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.ic_launcher));
+        drawableList.add(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.complaint));
+        drawableList.add(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.determinated_2));
+        drawableList.add(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.determinated));
+        drawableList.add(ContextCompat.getDrawable(getApplicationContext(), R.mipmap.suggestion));
 
         for (int i = 0; i < customer_bottom_text.size(); i++) {
             BigItemBean bigItemBean = new BigItemBean();

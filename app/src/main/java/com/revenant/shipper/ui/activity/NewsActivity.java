@@ -56,7 +56,14 @@ public class NewsActivity extends BaseActivity {
 //
         viewpagernews.setAdapter(newMainAdapter);
         tablayoutnews.setupWithViewPager(viewpagernews);
+        setcenterTitle("意见建议");
 
+    }
+
+    @Override
+    public void leftbarclick() {
+        super.leftbarclick();
+        finish();
     }
 
     @Override

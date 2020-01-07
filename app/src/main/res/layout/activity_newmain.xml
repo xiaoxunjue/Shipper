@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,25 +7,32 @@
     android:orientation="vertical"
     tools:context="com.revenant.shipper.ui.activity.InitActivity">
 
-    <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tablayout"
-        style="@style/Base.Widget.Design.TabLayout"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:tabIndicatorFullWidth="false"
-        app:tabTextColor="@color/white">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-    </com.google.android.material.tabs.TabLayout>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tablayout"
+            style="@style/Base.Widget.Design.TabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:tabIndicatorFullWidth="false"
+            app:tabTextColor="@color/white">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerviewareaselect"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+        </com.google.android.material.tabs.TabLayout>
 
-    <androidx.viewpager.widget.ViewPager
-        android:id="@+id/viewpager"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerviewareaselect"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"></androidx.recyclerview.widget.RecyclerView>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></androidx.viewpager.widget.ViewPager>
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/publishbotton"
@@ -34,4 +41,4 @@
         android:layout_gravity="bottom|end"
         android:layout_margin="5dp"
         app:srcCompat="@android:drawable/ic_dialog_email" />
-</LinearLayout>
+</FrameLayout>

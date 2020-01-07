@@ -5,7 +5,7 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
-    <color name="bar_bg_color">#5B86F9</color>
+    <color name="bar_bg_color">#6698C9</color>
     <color name="o2oman">#6698C9</color>
     <color name="bar_text_color">#ffffff</color>
     <color name="bottom_select_text">#fe9a35</color>
@@ -16,4 +16,8 @@
     <color name="login_btn_color">#5B86F9</color>
     <color name="driver_edit_image_bottom_text">#5A85FA</color>
     <color name="main_tab_indicator_color">#F59A23</color>
+    <color name="login_possward_color">#438fa5</color>
+    <color name="mine_warn_authentication_color">#FACD91</color>
+    <color name="login_no_authentication_cardcolor">#4395F9</color>
+    <color name="tab_select_news_color">#7F7F7F</color>
 </resources>
