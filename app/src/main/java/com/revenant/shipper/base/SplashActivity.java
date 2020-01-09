@@ -6,6 +6,7 @@ import com.revenant.shipper.MainActivity;
 import com.revenant.shipper.R;
 import com.revenant.shipper.ui.activity.NewMainActivity;
 import com.revenant.shipper.ui.activity.NoIdentificationActivity;
+import com.revenant.shipper.ui.activity.PublishedSupplyOfGoodsActivity;
 
 public class SplashActivity extends BaseActivity {
 
@@ -29,7 +30,7 @@ public class SplashActivity extends BaseActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(NoIdentificationActivity.class);
+                startActivity(PublishedSupplyOfGoodsActivity.class);
                 finish();
             }
         }, 2000);

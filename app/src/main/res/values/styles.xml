@@ -38,6 +38,13 @@
         <item name="tabSelectedTextColor">@color/white</item>
     </style>
 
+    <style name="publish_goods_tab" parent="android:Widget">
+        <item name="tabBackground">@color/white</item>
+        <item name="tabIndicatorColor">@color/main_tab_indicator_color</item>
+        <item name="tabIndicatorHeight">2dp</item>
+        <item name="tabSelectedTextColor">@color/tab_select_news_color</item>
+    </style>
+
     <style name="mine_authentication_okstyle">
         <item name="android:paddingBottom">2dp</item>
         <item name="android:paddingTop">2dp</item>
@@ -65,4 +72,68 @@
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:layout_marginBottom">10dp</item>
     </style>
+
+    <style name="suggestionstypenormal">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:ems">6</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:background">@drawable/suggestions_type_normalstyle</item>
+    </style>
+
+    <style name="suggestionstypeselected">
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:paddingBottom">2dp</item>
+        <item name="android:ems">6</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_gravity">center_horizontal</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/bottom_select_text</item>
+        <item name="android:background">@drawable/suggestions_type_okstyle</item>
+    </style>
+
+    <style name="publish_goods_enty_text">
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_gravity">center_vertical</item>
+    </style>
+
+    <declare-styleable name="SideBar">
+        <attr name="mRadius" format="dimension" />
+        <attr name="mTextColor" format="color" />
+        <attr name="mBgTextColor" format="color" />
+        <attr name="mBgColor" format="color" />
+        <attr name="mBgTextSize" format="dimension" />
+        <attr name="mTextSize" format="dimension" />
+    </declare-styleable>
+
+    <style name="edit_empty_car">
+        <item name="android:textColor">@color/bottom_select_text</item>
+        <item name="android:background">@drawable/suggestions_type_okstyle</item>
+    </style>
+
+    <style name="delete_empty_car">
+        <item name="android:textColor">@color/delete_empty_car</item>
+        <item name="android:background">@drawable/edit_empty_car</item>
+    </style>
+
+    <style name="mine_template_btn">
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingLeft">25dp</item>
+        <item name="android:paddingRight">25dp</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
 </resources>

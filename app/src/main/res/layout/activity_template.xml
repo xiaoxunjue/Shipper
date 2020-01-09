@@ -5,4 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.revenant.shipper.ui.activity.PublishEmptyCarActivity"></LinearLayout>
+    tools:context="com.revenant.shipper.ui.activity.TemplateActivity">
+    <include layout="@layout/item_mine_template"></include>
+</LinearLayout>

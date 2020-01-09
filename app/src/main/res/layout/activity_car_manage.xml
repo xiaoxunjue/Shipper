@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
     android:orientation="vertical"
     tools:context="com.revenant.shipper.ui.activity.EmptyCarManageActivity">
 
@@ -16,16 +18,23 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:text="发布空车"></TextView>
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@color/blue"
+            android:padding="5dp"
+            android:text="发布空车"
+            android:textColor="@color/white"></TextView>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true">
 
-            <EditText
+            <androidx.appcompat.widget.SearchView
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"></EditText>
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                app:queryHint="搜索"></androidx.appcompat.widget.SearchView>
         </LinearLayout>
     </RelativeLayout>
 
@@ -33,4 +42,6 @@
         android:id="@+id/empty_car_recyclerveiw"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+    <include layout="@layout/item_empty_car_manage"></include>
 </LinearLayout>

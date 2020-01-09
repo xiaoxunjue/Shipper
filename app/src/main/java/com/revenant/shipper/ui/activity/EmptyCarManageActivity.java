@@ -45,7 +45,7 @@ public class EmptyCarManageActivity extends BaseActivity {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.publishEmptyCar:
-                startActivity(PublishActivity.class);
+                startActivity(PublishEmptyCarActivity.class);
                 break;
             default:
         }

@@ -1,0 +1,70 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.revenant.shipper.ui.fragment.ConversantVehicleDesignateFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/publish_search_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:queryHint="输入手机号搜索"></androidx.appcompat.widget.SearchView>
+
+            <TextView
+                style="@style/suggestionstypenormal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="15dp"
+                android:text="添加熟车"></TextView>
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/designate_recyclerview"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"></androidx.recyclerview.widget.RecyclerView>
+
+            <TextView
+                android:id="@+id/tv_dialog"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:background="@mipmap/bg_toast"
+                android:gravity="center"
+                android:textColor="#ffffffff"
+                android:textSize="35dp"
+                android:visibility="gone" />
+
+            <com.revenant.shipper.ui.view.SideBar
+                android:id="@+id/sideBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="right|center"
+                android:layout_marginTop="100dp"
+                android:layout_marginBottom="100dp"
+                app:mBgColor="#aa000000"
+                app:mBgTextColor="#ffffff"
+                app:mBgTextSize="40dp"
+                app:mRadius="5dp"
+                app:mTextColor="#858c94"
+                app:mTextSize="10dp" />
+        </FrameLayout>
+    </LinearLayout>
+
+</FrameLayout>

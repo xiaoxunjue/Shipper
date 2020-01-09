@@ -20,4 +20,10 @@
     <color name="mine_warn_authentication_color">#FACD91</color>
     <color name="login_no_authentication_cardcolor">#4395F9</color>
     <color name="tab_select_news_color">#7F7F7F</color>
+    <color name="publish_goods_muban_color">#BD814B</color>
+    <color name="publish_goods_bg_color">#B7B7B7</color>
+    <color name="blue">#1E90FF</color>
+    <color name="delete_empty_car">#D9001B</color>
+
+
 </resources>
