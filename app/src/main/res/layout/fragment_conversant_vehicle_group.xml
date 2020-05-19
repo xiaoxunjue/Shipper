@@ -5,35 +5,72 @@
     android:layout_height="match_parent"
     tools:context="com.revenant.shipper.ui.fragment.ConversantVehicleGroupFragment">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.SearchView
-                android:id="@+id/publish_search_phone"
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/all_confirm"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/top_title"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/publish_search_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:queryHint="输入手机号搜索"></androidx.appcompat.widget.SearchView>
+
+                <TextView
+                    android:id="@+id/buildgroup"
+                    style="@style/suggestionstypenormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="15dp"
+                    android:text="新建分组"></TextView>
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/publish_goods_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/all_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingTop="10dp"
+            android:visibility="visible">
+
+            <RadioButton
+                android:id="@+id/all_select"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                app:queryHint="输入手机号搜索"></androidx.appcompat.widget.SearchView>
+                android:text="全选"></RadioButton>
 
             <TextView
-                style="@style/suggestionstypenormal"
+                android:id="@+id/confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
-                android:layout_marginRight="15dp"
-                android:text="新建分组"></TextView>
+                android:background="@color/blue"
+                android:paddingLeft="30dp"
+                android:paddingTop="8dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="8dp"
+                android:text="确认"
+                android:textColor="@color/white"></TextView>
         </RelativeLayout>
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/publish_goods_search"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
-
-        <include layout="@layout/item_acquainted_order"></include>
-    </LinearLayout>
+    </RelativeLayout>
 </FrameLayout>

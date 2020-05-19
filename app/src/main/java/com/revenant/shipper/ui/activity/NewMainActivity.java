@@ -48,12 +48,12 @@ public class NewMainActivity extends BaseActivity {
     @BindView(R.id.recyclerviewareaselect)
     RecyclerView recyclerviewareaselect;
     private List<Fragment> fragmentList;
-    private List<String> titleList;
+    private List<String>   titleList;
     private NewMainAdapter newMainAdapter;
 
     private AreaItemAdapter areaItemAdapter;
-    private int areatype = 0; // areatype=0,省，1市，2区
-    private int areaposition = 0;
+    private int             areatype = 0; // areatype=0,省，1市，2区
+    private int             areaposition = 0;
 
 
     private AMapLocationClient locationClient = null;
@@ -287,8 +287,13 @@ public class NewMainActivity extends BaseActivity {
          * 进入我的页面
          *
          * */
-        startActivity(MineActivity.class);
 
+        /*
+         * 进入我的
+         * */
+        startActivity(MineDriverActivity.class);
+
+//        startActivity(TemplateActivity.class);
     }
 
     @Override

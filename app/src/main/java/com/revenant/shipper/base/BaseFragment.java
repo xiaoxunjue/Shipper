@@ -2,6 +2,7 @@ package com.revenant.shipper.base;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +14,11 @@ import com.apkfuns.logutils.LogUtils;
 import com.github.nukc.stateview.StateView;
 import com.revenant.shipper.bean.BaseBean.MessageEvent;
 import com.revenant.shipper.utils.EventBusUtil;
+import com.xiaoyezi.networkdetector.NetStateObserver;
+import com.xiaoyezi.networkdetector.NetworkDetector;
+import com.xiaoyezi.networkdetector.NetworkType;
 
+import org.greenrobot.eventbus.EventBus;
 import org.greenrobot.eventbus.Subscribe;
 import org.greenrobot.eventbus.ThreadMode;
 
@@ -28,13 +33,12 @@ public abstract class BaseFragment extends Fragment {
     protected Context mContext;
     protected StateView mStateView;
     public Unbinder unbinder;
-
+    private NetStateObserver observer;
     protected abstract int setLayoutId();
 
     protected abstract void initView();
 
     public abstract void initData();
-
 
     protected boolean isRegisterEventBus() {
         return false;
@@ -44,7 +48,28 @@ public abstract class BaseFragment extends Fragment {
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         mContext = getActivity();
+        observer = new NetStateObserver() {
+            @Override
+            public void onDisconnected() {
+                doNoNetSomething();
+//                showErrorView();
+//                new Handler().postDelayed(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        showContentView();
+//
+//                    }
+//                }, 2000);
 
+//                textView.setText("onDisconnected");
+            }
+
+            @Override
+            public void onConnected(NetworkType networkType) {
+                doNoCheckNetSomething();
+            }
+        };
+        NetworkDetector.getInstance().addObserver(observer);
     }
 
     @Nullable
@@ -75,7 +100,9 @@ public abstract class BaseFragment extends Fragment {
     private void init() {
         if (isRegisterEventBus()) {
             LogUtils.d("EBBaseFragment", "register");
-            EventBusUtil.register(this);
+            if(!EventBus.getDefault().isRegistered(this)){//
+                EventBusUtil.register(this);// 加上判断
+            }
         }
 
     }
@@ -117,5 +144,18 @@ public abstract class BaseFragment extends Fragment {
         if (isRegisterEventBus()) {
             EventBusUtil.unregister(this);
         }
+
+        NetworkDetector.getInstance().removeObserver(observer);
+
+    }
+
+    public void doNoNetSomething() {
+
+    }
+
+    /*无网络状态事务*/
+
+    public void doNoCheckNetSomething() {
+
     }
 }

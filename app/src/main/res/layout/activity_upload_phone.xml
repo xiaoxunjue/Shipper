@@ -26,6 +26,7 @@
                 android:textSize="20sp"></TextView>
 
             <LinearLayout
+                android:id="@+id/upload_phone_line"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="20dp"
@@ -36,19 +37,19 @@
                 android:paddingTop="30dp">
 
                 <ImageView
-                    android:layout_width="100dp"
-                    android:layout_height="100dp"
+                    android:id="@+id/upload_image"
+                    android:layout_width="250dp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="50dp"
-                    android:layout_marginBottom="50dp"
                     android:adjustViewBounds="true"
                     android:scaleType="fitXY"
-                    android:src="@mipmap/shipper_upload"></ImageView>
+                    android:src="@mipmap/uploadnew"></ImageView>
 
                 <Button
+                    android:id="@+id/submit_ok"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="80dp"
+                    android:layout_marginTop="10dp"
                     android:background="@color/login_btn_color"
                     android:text="上传头像"
                     android:textColor="@color/white"
@@ -58,6 +59,7 @@
     </androidx.cardview.widget.CardView>
 
     <Button
+        android:id="@+id/confirm_oka"
         style="@style/login_btn_style_default"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

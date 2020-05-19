@@ -5,4 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.revenant.shipper.ui.activity.PublishEmptyCarActivity"></LinearLayout>
+    tools:context="com.revenant.driver.ui.activity.InitActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            style="@style/blue_border_blue_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="点击我的等我"></TextView>
+
+
+        <TextView
+            style="@style/gray_border_gray_text"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="点击我的等我"></TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

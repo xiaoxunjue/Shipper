@@ -27,35 +27,135 @@ public class SPUtils {
      */
     public static String getUserToken(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
-        return sharedPreferences.getString("user_token", "");
+        return sharedPreferences.getString("shipper_user_token", "");
     }
 
     public static void setUserToken(Context context, String userToken) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("user_token", userToken);
-        editor.commit();
-    }
-    public static int getWalletId(Context context) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
-        return sharedPreferences.getInt("wallet_id", 0);
-    }
-
-    public static void setWalletId(Context context, int userId) {
-        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
-        SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putInt("wallet_id", userId);
+        editor.putString("shipper_user_token", userToken);
         editor.commit();
     }
 
     public static void clearUserToken(Context context) {
         SharedPreferences preferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = preferences.edit();
-        editor.remove("user_token");
+        editor.remove("shipper_user_token");
+        editor.commit();
+    }
+
+//    public static String getUserStatus(Context context) {
+//        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+//        return sharedPreferences.getString("user_authentication", "-1");
+//    }
+
+    public static void setUserStatus(Context context, String user_authentication) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("shipper_user_authentication", user_authentication);
+        editor.commit();
+    }
+
+    public static void clearUserStatus(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove("shipper_user_authentication");
         editor.commit();
     }
 
 
+    public static String getJpRidToken(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("shipper_Jpush_rid", "");
+    }
+
+    public static void setJpRidToken(Context context, String userToken) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("shipper_Jpush_rid", userToken);
+        editor.commit();
+    }
+
+    public static boolean getUserShowwWallet(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        return sharedPreferences.getBoolean("shipper_user_show_wallet", true);
+    }
+
+    public static void setUserShowwWallet(Context context, boolean userToken) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putBoolean("shipper_user_show_wallet", userToken);
+        editor.commit();
+    }
+
+    public static int getAccounId(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        return sharedPreferences.getInt("shipper_accoun_id", 0);
+    }
+
+    public static void setAccounId(Context context, int userId) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("shipper_accoun_id", userId);
+        editor.commit();
+    }
+
+    public static void clearAccounId(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove("shipper_accoun_id");
+        editor.commit();
+    }
+
+    public static int getUpdateNum(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        return sharedPreferences.getInt("shipper_update",0);
+    }
+
+    public static void setUpdateNum(Context context, int mobile) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("shipper_update", mobile);
+        editor.commit();
+    }
+
+    public static String getUsermobile(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        return sharedPreferences.getString("shipper_mobile", "");
+    }
+
+    public static void setUsermobile(Context context, String mobile) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putString("shipper_mobile", mobile);
+        editor.commit();
+    }
+
+    public static void clearUsermobile(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove("shipper_mobile");
+        editor.commit();
+    }
+
+    public static void clearJpRidToken(Context context) {
+        SharedPreferences preferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = preferences.edit();
+        editor.remove("shipper_Jpush_rid");
+        editor.commit();
+    }
+
+    public static int getPushCode(Context context) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        return sharedPreferences.getInt("shipper_PushCode", 0);
+    }
+
+    public static void setPushCode(Context context, int shopId) {
+        SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.putInt("shipper_PushCode", shopId);
+        editor.commit();
+    }
     /**
      * 世界消息主键
      *
@@ -111,6 +211,7 @@ public class SPUtils {
         editor.putInt("user_id", userId);
         editor.commit();
     }
+
     public static int getShopId(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
         return sharedPreferences.getInt("shop_id", 0);
@@ -157,14 +258,14 @@ public class SPUtils {
      */
     public static String getUserPhone(Context context) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
-        return sharedPreferences.getString("user_phone", null);
+        return sharedPreferences.getString("shipper_user_phone", null);
     }
 
 
     public static void setUserPhone(Context context, String mUserPhone) {
         SharedPreferences sharedPreferences = context.getSharedPreferences(SHARED_PREFS_FILE, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
-        editor.putString("user_phone", mUserPhone);
+        editor.putString("shipper_user_phone", mUserPhone);
         editor.commit();
     }
 

@@ -1,5 +1,6 @@
 package com.revenant.shipper.utils;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -14,12 +15,17 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.Toast;
 
+import com.apkfuns.logutils.LogUtils;
 import com.google.gson.JsonSyntaxException;
 
 import java.net.ConnectException;
 import java.net.SocketTimeoutException;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
+
+import cn.hutool.core.date.DateUtil;
+import cn.hutool.core.util.CharsetUtil;
+import cn.hutool.core.util.HexUtil;
 
 /**
  * Created by Administrator on 2018/8/23.
@@ -32,6 +38,33 @@ public class Utils {
      * @param path
      * @return
      */
+
+    @SuppressLint("StaticFieldLeak")
+    private static Context context;
+
+    private Utils() {
+        throw new UnsupportedOperationException("u can't instantiate me...");
+    }
+
+    /**
+     * 初始化工具类
+     *
+     * @param context 上下文
+     */
+    public static void init(Context context) {
+        Utils.context = context.getApplicationContext();
+    }
+
+    /**
+     * 获取ApplicationContext
+     *
+     * @return ApplicationContext
+     */
+    public static Context getContext() {
+        if (context != null) return context;
+        throw new NullPointerException("u should init first");
+    }
+
     public static boolean isPicFile(String path) {
         BitmapFactory.Options options = new BitmapFactory.Options();
         options.inJustDecodeBounds = true;
@@ -144,5 +177,13 @@ public class Utils {
         Uri data = Uri.parse("tel:" + phoneNum);
         intent.setData(data);
         activity.startActivity(intent);
+    }
+
+    public static String get64String() {
+        String timestamp = String.valueOf(DateUtil.current(false)) + "Wang." + "Love." + "YaoShi.";
+//        String timestamp = "";
+        String hex = HexUtil.encodeHexStr(timestamp, CharsetUtil.CHARSET_UTF_8) + "WLY.";
+
+        return hex;
     }
 }

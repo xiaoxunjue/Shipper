@@ -52,6 +52,7 @@
         </RelativeLayout>
 
         <androidx.recyclerview.widget.RecyclerView
+            android:paddingBottom="20dp"
             android:id="@+id/mine_bigitem_recyclerview"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>

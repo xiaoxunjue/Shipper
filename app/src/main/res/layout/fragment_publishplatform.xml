@@ -1,14 +1,38 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.revenant.shipper.ui.fragment.PublishPlatformFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <androidx.core.widget.NestedScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:background="@color/mine_warn_authentication_color">
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ellipsize="marquee"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:singleLine="true"
+            android:textColor="@color/red"
+            android:textSize="16sp"
+            tools:text="设备名称" />
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nestscroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -37,27 +61,38 @@
                         android:textColor="@color/black"
                         android:textSize="15sp"></TextView>
 
-                    <ch.ielse.view.SwitchView
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/offline_jiesuan"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        app:ratioAspect="0.5" />
+                        android:layout_height="wrap_content" />
                 </LinearLayout>
 
-                <TextView
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:id="@+id/toubao_isornot"
                     android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:text="使用模板发货 >"
-                    android:textColor="@color/publish_goods_muban_color"
-                    android:textSize="15sp"></TextView>
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:text="是否投保"
+                        android:textColor="@color/black"
+                        android:textSize="15sp"></TextView>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/toubao"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
             </RelativeLayout>
 
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/white"
                 app:cardCornerRadius="5dp">
 
@@ -85,12 +120,15 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/load_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="5dp"
                             android:drawableRight="@mipmap/arrowdown"
                             android:ems="12"
-                            android:hint="请输入装货地"
+                            android:hint="请选择装货地"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
                             android:textColor="@color/black"></TextView>
 
                         <View
@@ -99,11 +137,14 @@
                             android:background="@color/publish_goods_bg_color"></View>
 
                         <EditText
+                            android:id="@+id/load_detail_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="5dp"
                             android:background="@null"
                             android:hint="必填:请输入详细地址"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
                             android:textSize="13sp"></EditText>
                     </LinearLayout>
                 </LinearLayout>
@@ -112,7 +153,7 @@
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="2dp"
+                android:layout_marginTop="10dp"
                 android:background="@color/white"
                 app:cardCornerRadius="5dp">
 
@@ -140,12 +181,15 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/unload_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="5dp"
                             android:drawableRight="@mipmap/arrowdown"
                             android:ems="12"
-                            android:hint="请输入装货地"
+                            android:hint="请选择卸货地"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="3dp"
                             android:textColor="@color/black"></TextView>
 
                         <View
@@ -154,38 +198,50 @@
                             android:background="@color/publish_goods_bg_color"></View>
 
                         <EditText
+                            android:id="@+id/unload_detail_text"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="10dp"
                             android:background="@null"
                             android:hint="必填:请输入详细地址"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
                             android:textSize="13sp"></EditText>
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
+                            android:layout_marginTop="5dp"
                             android:background="@color/publish_goods_bg_color"></View>
 
                         <EditText
+                            android:id="@+id/unload_personal_phone"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="10dp"
                             android:background="@null"
-                            android:hint="必填:请输入收货人电话"
+                            android:hint="必填:请输入卸货人电话"
                             android:inputType="phone"
+                            android:maxLength="11"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
                             android:textSize="13sp"></EditText>
 
                         <View
                             android:layout_width="match_parent"
                             android:layout_height="2dp"
+                            android:layout_marginTop="5dp"
                             android:background="@color/publish_goods_bg_color"></View>
 
                         <EditText
+                            android:id="@+id/unload_personal_name"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
-                            android:layout_marginTop="5dp"
+                            android:layout_marginTop="10dp"
                             android:background="@null"
-                            android:hint="必填:请输入收货人姓名"
+                            android:hint="必填:请输入卸货人姓名"
+                            android:paddingTop="3dp"
+                            android:paddingBottom="3dp"
                             android:textSize="13sp"></EditText>
 
                     </LinearLayout>
@@ -212,14 +268,15 @@
                         android:textColor="@color/black"
                         android:textSize="15sp"></TextView>
 
-                    <ch.ielse.view.SwitchView
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/auto_confirm_driver"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        app:ratioAspect="0.5" />
+                        app:ratioAspect="0.45" />
                 </LinearLayout>
 
                 <LinearLayout
+                    android:id="@+id/show_bills"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
@@ -233,11 +290,12 @@
                         android:textColor="@color/black"
                         android:textSize="15sp"></TextView>
 
-                    <ch.ielse.view.SwitchView
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/make_out_bills"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="5dp"
-                        app:ratioAspect="0.5" />
+                        app:ratioAspect="0.45" />
+
                 </LinearLayout>
             </RelativeLayout>
 
@@ -258,7 +316,7 @@
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
+                        android:layout_marginLeft="5dp"
                         android:paddingBottom="20dp">
 
                         <LinearLayout
@@ -282,11 +340,14 @@
                                 android:orientation="vertical">
 
                                 <EditText
+                                    android:id="@+id/goods_name"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:background="@null"
                                     android:ems="13"
                                     android:hint="输入货物名称"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
                                     android:textSize="15sp"></EditText>
 
                                 <View
@@ -301,8 +362,8 @@
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:paddingBottom="20dp">
+                        android:layout_marginLeft="5dp"
+                        android:paddingBottom="10dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -325,11 +386,14 @@
                                 android:orientation="vertical">
 
                                 <TextView
+                                    android:id="@+id/goods_type"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:background="@null"
                                     android:ems="13"
                                     android:hint="请选择车辆长度,车型,货物类型等"
+                                    android:paddingTop="3dp"
+                                    android:paddingBottom="3dp"
                                     android:textSize="15sp"></TextView>
 
                                 <View
@@ -344,8 +408,8 @@
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:paddingBottom="20dp">
+                        android:layout_marginLeft="5dp"
+                        android:paddingBottom="10dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -373,12 +437,15 @@
                                     android:orientation="horizontal">
 
                                     <EditText
+                                        android:id="@+id/goods_count"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
-                                        android:ems="12"
+                                        android:ems="5"
                                         android:hint="请输入货源的数量"
                                         android:inputType="number"
+                                        android:paddingTop="3dp"
+                                        android:paddingBottom="3dp"
                                         android:textSize="15sp"></EditText>
 
                                     <TextView
@@ -401,8 +468,8 @@
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
-                        android:paddingBottom="20dp">
+                        android:layout_marginLeft="5dp"
+                        android:paddingBottom="10dp">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -430,12 +497,67 @@
                                     android:orientation="horizontal">
 
                                     <EditText
+                                        android:id="@+id/goods_price"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
                                         android:ems="13"
                                         android:hint="请输入运费单价"
-                                        android:inputType="number"
+                                        android:inputType="numberDecimal"
+                                        android:paddingTop="3dp"
+                                        android:paddingBottom="3dp"
+                                        android:textSize="15sp"></EditText>
+                                </LinearLayout>
+
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@color/publish_goods_bg_color"></View>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:paddingBottom="10dp">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingRight="10dp"
+                                android:text="运费总价"
+                                android:textColor="@color/black"
+                                android:textSize="18sp"></TextView>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <EditText
+                                        android:id="@+id/goods_all_price"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@null"
+                                        android:ems="13"
+                                        android:hint="请填货物总价格(选填)"
+                                        android:inputType="numberDecimal"
+                                        android:paddingTop="3dp"
+                                        android:paddingBottom="3dp"
                                         android:textSize="15sp"></EditText>
                                 </LinearLayout>
 
@@ -451,7 +573,7 @@
                     <RelativeLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
+                        android:layout_marginLeft="5dp"
                         android:paddingBottom="20dp">
 
                         <LinearLayout
@@ -480,18 +602,37 @@
                                     android:orientation="horizontal">
 
                                     <EditText
+                                        android:id="@+id/goods_weight"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:background="@null"
-                                        android:ems="9"
+                                        android:ems="5"
                                         android:hint="请输入一车装的重量"
-                                        android:inputType="number"
+                                        android:inputType="numberDecimal"
                                         android:textSize="15sp"></EditText>
 
                                     <Spinner
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
-                                        android:entries="@array/selectunits"></Spinner>
+                                        android:entries="@array/selectunits"
+                                        android:visibility="gone"></Spinner>
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:text="吨"
+                                        android:textColor="@color/black"
+                                        android:textSize="18sp"
+                                        android:visibility="gone"></TextView>
+
+                                    <org.angmarch.views.NiceSpinner
+                                        android:id="@+id/nice_spinner"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="8dp"
+                                        android:textSize="18sp"
+                                        android:visibility="visible" />
                                 </LinearLayout>
 
                                 <View
@@ -504,9 +645,9 @@
                     </RelativeLayout>
 
                     <RelativeLayout
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="30dp"
+                        android:layout_marginLeft="5dp"
                         android:paddingBottom="20dp">
 
                         <LinearLayout
@@ -530,17 +671,26 @@
                                 android:orientation="vertical">
 
                                 <LinearLayout
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
-                                    android:orientation="horizontal">
+                                    android:orientation="vertical">
 
                                     <TextView
+                                        android:id="@+id/timestart"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:drawableRight="@mipmap/arrowdown"
                                         android:drawablePadding="1dp"
-                                        android:ems="5"
-                                        android:hint="请选择"></TextView>
+                                        android:ems="14"
+                                        android:hint="请选择开始时间"
+                                        android:paddingTop="3dp"
+                                        android:paddingBottom="3dp"></TextView>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/publish_goods_bg_color"></View>
 
                                     <View
                                         android:layout_width="30dp"
@@ -549,22 +699,28 @@
                                         android:layout_marginLeft="20dp"
                                         android:layout_marginRight="20dp"
                                         android:background="@drawable/line_imaginary"
-                                        android:layerType="software" />
+                                        android:layerType="software"
+                                        android:visibility="gone" />
 
                                     <TextView
+                                        android:id="@+id/timeend"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content"
                                         android:drawableRight="@mipmap/arrowdown"
                                         android:drawablePadding="1dp"
-                                        android:ems="5"
-                                        android:hint="请选择"></TextView>
+                                        android:ems="14"
+                                        android:hint="请选择结束时间"
+                                        android:paddingTop="3dp"
+                                        android:paddingBottom="3dp"></TextView>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/publish_goods_bg_color"></View>
                                 </LinearLayout>
 
-                                <View
-                                    android:layout_width="match_parent"
-                                    android:layout_height="2dp"
-                                    android:layout_marginTop="5dp"
-                                    android:background="@color/publish_goods_bg_color"></View>
+
                             </LinearLayout>
                         </LinearLayout>
                     </RelativeLayout>
@@ -573,7 +729,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="30dp"
-                        android:paddingBottom="20dp">
+                        android:paddingBottom="20dp"
+                        android:visibility="gone">
 
                         <LinearLayout
                             android:layout_width="wrap_content"
@@ -617,9 +774,38 @@
                             </LinearLayout>
                         </LinearLayout>
                     </RelativeLayout>
+
+                    <LinearLayout
+                        android:id="@+id/fee_show"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="单车调度费："
+                            android:textColor="@color/black"></TextView>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="9%"
+                            android:textColor="@color/delete_empty_car"></TextView>
+                    </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/publish_btn_goods"
+                style="@style/login_btn_style_default"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="发货"></Button>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>
 
-</FrameLayout>
+
+</LinearLayout>

@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.revenant.shipper.R;
+
 public class MainActivity extends AppCompatActivity {
 
     @Override

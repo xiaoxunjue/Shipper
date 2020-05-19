@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.revenant.shipper.ui.activity.InitActivity">
+    tools:context="com.revenant.driver.com.revenant.shipper.ui.activity.NewMainActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

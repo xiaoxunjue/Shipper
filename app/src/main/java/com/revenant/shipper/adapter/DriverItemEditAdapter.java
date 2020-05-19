@@ -1,21 +1,11 @@
 package com.revenant.shipper.adapter;
 
-import android.content.Context;
-import android.view.View;
 import android.widget.EditText;
-
-import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.revenant.shipper.R;
-import com.revenant.shipper.bean.BigItemBean;
 import com.revenant.shipper.bean.Driver_edit_item;
-
-import java.util.List;
 
 /**
  * @ProjectName: Shipper

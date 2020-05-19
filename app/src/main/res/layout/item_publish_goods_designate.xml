@@ -14,6 +14,7 @@
         android:paddingTop="5dip"
         android:paddingBottom="5dip"
         android:text="A"
+        android:visibility="visible"
         android:textColor="#999999" />
 
     <LinearLayout
@@ -35,7 +36,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:scaleType="centerCrop"
-            android:src="@mipmap/person"></ImageView>
+            android:id="@+id/shucheimage"
+            ></ImageView>
 
         <LinearLayout
             android:layout_width="wrap_content"

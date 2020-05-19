@@ -3,12 +3,7 @@ package com.revenant.shipper.adapter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.revenant.shipper.R;
-import com.revenant.shipper.bean.AreaBeans;
 import com.revenant.shipper.bean.AreaShowBean;
-import com.revenant.shipper.bean.BigItemBean;
-import com.revenant.shipper.utils.AreaSelect;
-
-import java.util.List;
 
 /**
  * @ProjectName: Shipper
@@ -23,6 +18,7 @@ import java.util.List;
  * @Version: 1.0
  */
 public class AreaItemAdapter extends BaseQuickAdapter<AreaShowBean, BaseViewHolder> {
+
     public AreaItemAdapter() {
         super(R.layout.item_area);
     }

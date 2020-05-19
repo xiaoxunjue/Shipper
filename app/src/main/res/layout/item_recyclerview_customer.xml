@@ -11,7 +11,7 @@
         android:layout_gravity="center_horizontal"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@mipmap/tes"></ImageView>
+        ></ImageView>
 
     <TextView
         android:id="@+id/customer_item_text"

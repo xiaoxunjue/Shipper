@@ -60,15 +60,16 @@ public class BlankFragment extends BaseFragment {
         return true;
     }
 
+    @Override
     protected void receiveStickyEvent(MessageEvent event) {
         super.receiveStickyEvent(event);
         switch (event.getCode()) {
-            case MyEventCode.CODE_B:
-                if (event.getData().toString().equals("aaa")) {
-                    LogUtils.d("数据是" + "55555555555555555");
-                    ab.setText("3333333333333333");
-                }
-                break;
+//            case MyEventCode.CODE_B:
+//                if (event.getData().toString().equals("aaa")) {
+//                    LogUtils.d("数据是" + "55555555555555555");
+//                    ab.setText("3333333333333333");
+//                }
+//                break;
             default:
         }
     }

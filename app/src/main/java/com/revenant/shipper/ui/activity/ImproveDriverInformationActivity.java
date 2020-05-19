@@ -9,12 +9,10 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.revenant.shipper.DriverItemImageSelectAdapter;
 import com.revenant.shipper.R;
 import com.revenant.shipper.adapter.DriverItemEditAdapter;
-import com.revenant.shipper.adapter.MineBigItemAdapter;
 import com.revenant.shipper.base.BaseActivity;
 import com.revenant.shipper.bean.Driver_edit_item;
 import com.revenant.shipper.bean.Driver_improve_info_image_select;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -27,16 +25,16 @@ public class ImproveDriverInformationActivity extends BaseActivity {
     RecyclerView driverInfoiNputEditRecyclerview;
     @BindView(R.id.driver_image_input_edit_recyclerview)
     RecyclerView driverImageInputEditRecyclerview;
-    private DriverItemEditAdapter driverItemEditAdapter;
-    private Context context;
+    private DriverItemEditAdapter  driverItemEditAdapter;
+    private Context                context;
     private List<Driver_edit_item> driver_edit_itemList;
-    private List<String> driver_lable = Arrays.asList("我的姓名", "身份证号", "联系电话");
-    private List<String> driver_edit = Arrays.asList("请输入真实姓名", "请输入身份证号", "请输入手机号");
+    private List<String>           driver_lable = Arrays.asList("我的姓名", "身份证号", "联系电话");
+    private List<String>           driver_edit = Arrays.asList("请输入真实姓名", "请输入身份证号", "请输入手机号");
 
     private List<Driver_improve_info_image_select> image_selects;
-    private List<String> drive_image_bottomlist =
+    private List<String>                           drive_image_bottomlist =
             Arrays.asList("身份证正面", "身份证反面");
-    private DriverItemImageSelectAdapter driverItemImageSelectAdapter;
+    private DriverItemImageSelectAdapter           driverItemImageSelectAdapter;
 
     @Override
     public int getContentViewResId() {
@@ -84,5 +82,11 @@ public class ImproveDriverInformationActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
+    }
+
+    @Override
+    public void leftbarclick() {
+        super.leftbarclick();
+        finish();
     }
 }

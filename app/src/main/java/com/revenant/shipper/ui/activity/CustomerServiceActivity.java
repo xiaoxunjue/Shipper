@@ -7,7 +7,6 @@ import android.widget.TextView;
 
 import androidx.core.content.ContextCompat;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
@@ -15,7 +14,6 @@ import com.revenant.shipper.CustomerServiceAdapter;
 import com.revenant.shipper.R;
 import com.revenant.shipper.base.BaseActivity;
 import com.revenant.shipper.bean.BigItemBean;
-import com.revenant.shipper.ui.view.MineBigItem;
 import com.revenant.shipper.utils.Utils;
 
 import java.util.ArrayList;
@@ -79,7 +77,7 @@ public class CustomerServiceActivity extends BaseActivity {
                 }
             }
         });
-
+        setcenterTitle("客户服务");
 
     }
 
@@ -101,8 +99,14 @@ public class CustomerServiceActivity extends BaseActivity {
             case R.id.custom_service_online:
                 break;
             case R.id.custom_service_tel:
-                Utils.callPhone(this, "15881354454");
+                Utils.callPhone(this, "0412-8882888");
                 break;
         }
+    }
+
+    @Override
+    public void leftbarclick() {
+        super.leftbarclick();
+        finish();
     }
 }

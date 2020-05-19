@@ -2,6 +2,7 @@ package com.revenant.shipper.utils.apkUpdate;
 
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.os.Build;
 
 import com.revenant.shipper.App;
 
@@ -48,6 +49,13 @@ public class VersionUtils {
      * @return 版本号
      */
     public static int getVersionCode() {
-        return getPackageInfo().versionCode;
+        int appVersionCode=0;
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.P) {
+            long longVersionCode = getPackageInfo().getLongVersionCode();
+            appVersionCode = (int) longVersionCode;
+        } else {
+            appVersionCode = getPackageInfo().versionCode;
+        }
+        return appVersionCode;
     }
 }

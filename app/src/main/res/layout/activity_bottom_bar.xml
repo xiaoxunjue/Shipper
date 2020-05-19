@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context="com.revenant.shipper.base.BottomBarActivity">
+    tools:context="com.revenant.driver.com.revenant.shipper.base.BottomBarActivity">
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewpager"
         android:layout_width="match_parent"

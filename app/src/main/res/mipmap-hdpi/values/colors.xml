@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#6698C9</color>
+    <color name="bar_bg_color">#6698C9</color>
+    <color name="o2oman">#6698C9</color>
+    <color name="bar_text_color">#ffffff</color>
+    <color name="bottom_select_text">#fe9a35</color>
+    <color name="bottom_background_bar">#F6F9FE</color>
+    <color name="bottom_normal_text">#4e4e4f</color>
+
+    <color name="advices_select_text">#17BA8F</color>
+    <color name="title_advices_text">#000000</color>
+    <color name="advices_background_bar">#17BA8F</color>
+    <color name="advices_normal_text">#333333</color>
+    <color name="advices_add_content_text">#F2F7F8</color>
+    <color name="advices_add_btn">#00997C</color>
+
+
+    <color name="login_edit_style_normal">#FFFFFF</color>
+    <color name="login_edit_style_activated">#000000</color>
+    <color name="login_btn_color">#5B86F9</color>
+    <color name="driver_edit_image_bottom_text">#5A85FA</color>
+    <color name="main_tab_indicator_color">#F59A23</color>
+    <color name="login_possward_color">#438fa5</color>
+    <color name="mine_warn_authentication_color">#FACD91</color>
+    <color name="login_no_authentication_cardcolor">#4395F9</color>
+    <color name="tab_select_news_color">#7F7F7F</color>
+    <color name="publish_goods_muban_color">#BD814B</color>
+    <color name="publish_goods_bg_color">#B7B7B7</color>
+    <color name="blue">#1E90FF</color>
+    <color name="delete_empty_car">#D9001B</color>
+    <color name="btn_circle_bg">#C5D4FB</color>
+    <color name="red">#FF0000</color>
+    <color name="topred">#FF3538</color>
+    <color name="flaot_publish_goods_color">#C3D9FE</color>
+    <color name="gray">#D2D5DB</color>
+    <color name="walletcolor">#5E9BC0</color>
+    <color name="splashcolor">#FEF200</color>
+</resources>

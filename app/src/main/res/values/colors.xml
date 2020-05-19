@@ -4,7 +4,7 @@
     <color name="black">#000000</color>
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorAccent">#6698C9</color>
     <color name="bar_bg_color">#6698C9</color>
     <color name="o2oman">#6698C9</color>
     <color name="bar_text_color">#ffffff</color>
@@ -24,6 +24,22 @@
     <color name="publish_goods_bg_color">#B7B7B7</color>
     <color name="blue">#1E90FF</color>
     <color name="delete_empty_car">#D9001B</color>
+    <color name="btn_circle_bg">#C5D4FB</color>
+    <color name="red">#FF0000</color>
+    <color name="flaot_publish_goods_color">#C3D9FE</color>
+    <color name="gray">#D2D5DB</color>
+    <color name="walletcolor">#5E9BC0</color>
+    <color name="splashcolor">#FEF200</color>
+    <color name="netbgcolor">#FF7066</color>
 
+    <color name="advices_select_text">#17BA8F</color>
+    <color name="title_advices_text">#000000</color>
+    <color name="advices_background_bar">#17BA8F</color>
+    <color name="advices_normal_text">#333333</color>
+    <color name="advices_add_content_text">#F2F7F8</color>
+    <color name="advices_add_btn">#00997C</color>
+    <color name="commentcolor">#FFB403</color>
+    <color name="sencondcolor">#F2F7F8</color>
+    <color name="baoxianbg">#F5F4F9</color>
 
 </resources>

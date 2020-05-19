@@ -1,41 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.revenant.shipper">
-
 
     <permission
         android:name="com.revenant.shipper.permission.JPUSH_MESSAGE"
-        android:protectionLevel="signature" />
-
-    <!-- Required -->
+        android:protectionLevel="signature" /> <!-- Required -->
     <uses-permission android:name="com.revenant.shipper.permission.JPUSH_MESSAGE" />
     <uses-permission android:name="android.permission.RECEIVE_USER_PRESENT" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <!--写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据-->
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <!--用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
-    <!--获取运营商信息，用于支持提供运营商信息相关的接口-->
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <!--用于访问GPS定位-->
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <!--用于读取手机当前的状态-->
-    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
-    <!--用于访问wifi网络信息，wifi信息会用于进行网络定位-->
-    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
-    <!--这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位-->
-    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
-    <!--这个权限用于允许程序在手机屏幕关闭后后台进程仍然运行-->
+    <uses-permission android:name="android.permission.INTERNET" /> <!-- 写入扩展存储，向扩展卡写入数据，用于写入缓存定位数据 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" /> <!-- 获取运营商信息，用于支持提供运营商信息相关的接口 -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" /> <!-- 用于访问GPS定位 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" /> <!-- 用于读取手机当前的状态 -->
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" /> <!-- 用于访问wifi网络信息，wifi信息会用于进行网络定位 -->
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" /> <!-- 这个权限用于获取wifi的获取权限，wifi信息会用来进行网络定位 -->
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" /> <!-- 这个权限用于允许程序在手机屏幕关闭后后台进程仍然运行 -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_GPS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+
     <application
         android:name=".App"
-        android:allowBackup="true"
+        android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:persistent="true"
+        android:resizeableActivity="true"
+        android:roundIcon="@mipmap/ic_launcher"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:icon,android:allowBackup">
+        <activity android:name=".ui.activity.WebActivity"></activity>
+        <activity android:name=".ui.activity.BaoXianActivity" />
+        <activity android:name=".ui.activity.ShipperTrackActivity" />
+        <activity android:name=".utils.WebContentActivity" />
+        <activity android:name=".ui.activity.ShipperMapActivity" />
+        <activity android:name=".ui.activity.TestSomething" />
         <activity android:name=".base.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -43,67 +76,235 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".wxapi.WXEntryActivity"></activity>
-        <activity android:name=".base.BaseActivity"></activity>
-        <activity android:name=".base.BottomBarActivity"></activity>
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".base.GuideActivity"></activity>
-        <activity android:name=".ui.activity.InitActivity"></activity>
-        <activity android:name=".ui.activity.NewMainActivity"></activity>
-        <activity android:name=".ui.activity.MessageActivity"></activity>
-        <activity android:name=".ui.activity.PersonalActivity"></activity>
-        <activity android:name=".ui.activity.MineActivity"></activity>
-        <activity android:name=".ui.activity.LoginActivity"></activity>
-        <activity android:name=".ui.activity.ImproveDriverInformationActivity"></activity>
-        <activity android:name=".ui.activity.CustomerServiceActivity"></activity>
-        <activity android:name=".ui.activity.SuggestionsActivity"></activity>
-        <activity android:name=".ui.activity.NewsActivity"></activity>
-        <activity android:name=".ui.activity.OrderActivity"></activity>
-        <activity android:name=".ui.activity.EmptyCarManageActivity"></activity>
-        <activity android:name=".ui.activity.PublishActivity"></activity>
-        <activity android:name=".ui.activity.NewImproveDriverInformationActivity"></activity>
-        <activity android:name=".ui.activity.UploadPicturesActivity"></activity>
-        <activity android:name=".ui.activity.NoIdentificationActivity"></activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity android:name=".base.BaseActivity" />
+        <activity android:name=".base.BottomBarActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".base.GuideActivity" />
+        <activity android:name=".ui.activity.InitActivity" />
+        <activity android:name=".ui.activity.NewMainActivity" />
+        <activity android:name=".ui.activity.MessageActivity" />
+        <activity android:name=".ui.activity.PersonalActivity" />
+        <activity android:name=".ui.activity.MineDriverActivity" />
+        <activity android:name=".ui.activity.LoginActivity" />
+        <activity android:name=".ui.activity.ImproveDriverInformationActivity" />
+        <activity android:name=".ui.activity.CustomerServiceActivity" />
+        <activity android:name=".ui.activity.SuggestionsActivity" />
+        <activity android:name=".ui.activity.NewsActivity" />
+        <activity android:name=".ui.activity.OrderActivity" />
+        <activity android:name=".ui.activity.EmptyCarManageActivity" />
+        <activity android:name=".ui.activity.PublishEmptyCarActivity" />
+        <activity android:name=".ui.activity.NewImproveDriverInformationActivity" />
+        <activity android:name=".ui.activity.UploadPicturesActivity" />
+        <activity android:name=".ui.activity.NoIdentificationActivity" />
+        <activity android:name=".ui.activity.UploadCertificatePhotoActivity" /> <!-- 上传证件信息 -->
+        <activity android:name=".ui.activity.NewSecondImproveDriverInformationActivity" /> <!-- 第二版完善货主信息 -->
+        <activity android:name=".ui.activity.PublishedSupplyOfGoodsActivity" /> <!-- 发布货源 -->
+        <activity android:name=".ui.activity.UploadPhotoActivity" /> <!-- 修改头像 -->
+        <activity android:name=".ui.activity.TemplateActivity" /> <!-- 我的模板 -->
+        <activity android:name=".ui.activity.MineReceiptActivity" /> <!-- 我的发票 -->
+        <activity android:name=".ui.activity.ReceiptWriteActivity" /> <!-- 发票开出 -->
+        <activity android:name=".ui.activity.ReceiptTitleActivity" /> <!-- 发票抬头 -->
+        <activity android:name=".ui.activity.ReceiptHistoryActivity" /> <!-- 发票历史 -->
+        <activity android:name=".ui.activity.EditReceiptTitleActivity" /> <!-- 编写发票抬头 -->
+        <activity android:name=".ui.activity.SettingActivity" /> <!-- 设置 -->
+        <activity android:name=".ui.activity.DriverTrackActivity" /> <!-- 轨迹 -->
+        <activity android:name=".ui.activity.AddShuCheActivity" /> <!-- 添加熟车 -->
+        <activity android:name=".ui.activity.MessageDetailActivity" /> <!-- 消息详情 -->
+        <activity android:name=".ui.activity.GroupActivity" /> <!-- 群组 -->
+        <activity android:name=".ui.activity.MineShipperActivity" /> <!-- 我的货主端 -->
+        <activity android:name=".ui.activity.WalletWebActivity" /> <!-- 我的钱包web -->
+        <activity android:name=".ui.activity.PayFirstActivity" /> <!-- 支付类型1 -->
+        <activity android:name=".ui.activity.VerificationActivity" /> <!-- 验证码登录 -->
+        <activity android:name=".ui.activity.ForgetPasswordActivity" /> <!-- 忘记密码登录 -->
+        <activity
+            android:name=".ui.activity.ShipperMainActivity"
+            android:configChanges="orientation|keyboardHidden" /> <!-- 货主端主页面 -->
+        <activity android:name=".ui.activity.UploadCertificatePhotoTwoActivity" /> <!-- 个人身份认证页面 -->
+        <activity android:name=".ui.activity.UploadCertificatePhotoThreeActivity" /> <!-- 企业身份认证页面 -->
+        <activity android:name=".ui.activity.EmptyCarDetailActivity" /> <!-- 空车详情 -->
+        <activity android:name=".ui.activity.MyGoodsDetailActivity" /> <!-- 货源详情 -->
+        <activity android:name=".ui.activity.DriverInfoActivity" /> <!-- 司机简介 -->
+        <activity android:name=".ui.activity.PushGoodsListActivity" /> <!-- 推送货源列表 -->
+        <activity android:name=".ui.activity.MineShuCheActivity" /> <!-- 我的熟车列表 -->
+        <activity android:name=".ui.activity.FaPiaoDetailActivity" /> <!-- 发票详情 -->
+        <activity android:name=".ui.activity.ShuCheActivity" /> <!-- 熟车发布 -->
+        <activity android:name=".ui.activity.OrderCarDetailActivity" /> <!-- 熟车发布 -->
+        <activity android:name=".ui.activity.PublishedSupplyOfGoodsActivityHuo" /> <!-- 货主 -->
+        <activity android:name=".ui.activity.PublishedSupplyOfGoodsActivityShu" /> <!-- 熟车 -->
+        <activity android:name=".ui.activity.AddReceiptTitleActivity" /> <!-- 添加抬头 -->
+        <activity android:name=".ui.activity.JiaYouKaWebActivity" /> <!-- 我的加油 -->
+        <activity android:name=".ui.activity.ETCStartActivity" /> <!-- ETC开始 -->
+        <activity android:name=".ui.activity.SetcWriteCardActivity" /> <!-- 写入Etc -->
+        <activity android:name=".ui.activity.KaiChuFaPiaoActivity" /> <!-- 写入Etc -->
+        <activity android:name=".ui.activity.ShuCheEditActivity" /> <!-- 写入货源编辑 -->
+        <activity android:name=".ui.activity.ZoomActivity" /> <!-- 写入货源编辑 -->
+        <activity android:name=".ui.activity.OilWebActivity" /> <!-- 找油网 -->
+        <activity android:name=".ui.activity.LoginTokenActivity" /> <!-- 登录 -->
+        <activity android:name=".ui.activity.PaySuccessActivity" /> <!-- 付款成功 -->
+        <activity android:name=".ui.activity.EditGoodsInfoNewActivity" /> <!-- 付款成功 -->
+        <activity android:name=".ui.activity.ShuCheEditNewActivity" /> <!-- 付款成功 -->
+        <activity android:name=".test.mvc.ui.TestMvcMainActivity" /> <!-- 付款成功 -->
+        <activity android:name=".ui.activity.AddAdvicesActivity" />
+        <activity android:name=".ui.activity.AdvicesActivity" />
+        <activity android:name=".ui.activity.AdviceDetailActivity" />
+        <activity android:name=".ui.activity.CommentAddSuccessActivity" />
+        <activity android:name=".ui.activity.CommentDetailActivity" />
+        <activity android:name=".ui.activity.CommentActivity" />
+        <activity android:name=".ui.activity.AddCommentActivity" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.EtcTranferShip"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Black.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.EtcTranferInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.EtcOrderDetailsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.PreChangeEtc"
+            android:label="@string/write_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.ReadEtcUSB"
+            android:label="@string/write_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.ReadEtcNFC"
+            android:label="@string/write_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.ReadETCBlueTooth"
+            android:label="@string/write_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.MyListView"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.AddressList"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.AddressDetail"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.ETCList"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.manyi.mobile.activity.CardNoEtcNo"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.WalletPaySelect"
+            android:theme="@style/shareStyle" />
+        <activity
+            android:name="com.manyi.mobile.activity.ReadNFCCard"
+            android:label="@string/read_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.activity.CityActivity"
+            android:label="@string/read_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.activity.OpenCardEtcActivity"
+            android:label="@string/read_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.InputAutoEditText"
+            android:label="@string/read_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.WapPayActivity"
+            android:label="@string/read_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.activity.MyWebView"
+            android:label="@string/read_etc"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.OpenETCCard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.PayResultActivity"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+        <activity
+            android:name="com.manyi.mobile.etcsdk.activity.ValidateEtcCard"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.NoTitleBar"
+            android:windowSoftInputMode="adjustPan|stateHidden" />
+
+        <service
+            android:name="com.genvict.bluetooth.manage.BlueToothService"
+            android:enabled="true" />
+
         <activity
             android:name="com.amap.api.navi.AmapRouteActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@android:style/Theme.NoTitleBar" />
+            android:theme="@android:style/Theme.NoTitleBar" /> <!-- 权限工具类 -->
+        <activity
+            android:name=".utils.PermissionUtils$PermissionActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:multiprocess="true"
+            android:theme="@style/ActivityTranslucent"
+            android:windowSoftInputMode="stateHidden|stateAlwaysHidden" />
 
         <meta-data
             android:name="com.amap.api.v2.apikey"
             android:value="e479d654743c848ee0b20d582bc115fa" />
 
-        <service android:name="com.amap.api.location.APSService"></service>
-
+        <service android:name="com.amap.api.location.APSService" />
         <service
             android:name=".service.JPushService"
             android:enabled="true"
-            android:exported="false"
             android:process=":pushcore">
             <intent-filter>
                 <action android:name="cn.jiguang.user.service.action" />
             </intent-filter>
-        </service>
-
-        <!-- Required since 3.0.7 -->
+        </service> <!-- Required since 3.0.7 -->
         <!-- 新的 tag/alias 接口结果返回需要开发者配置一个自定的广播 -->
         <!-- 3.3.0开始所有事件将通过该类回调 -->
         <!-- 该广播需要继承 JPush 提供的 JPushMessageReceiver 类, 并如下新增一个 Intent-Filter -->
         <receiver
             android:name=".receiver.MyJpushReceiver"
-            android:enabled="true"
-            android:exported="false">
+            android:enabled="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.RECEIVE_MESSAGE" />
+
                 <category android:name="com.zhqy.child" />
             </intent-filter>
-        </receiver>
-
-        <!-- 可配置 android:process 参数将 PushService 放在其他进程中 -->
+        </receiver> <!-- 可配置 android:process 参数将 PushService 放在其他进程中 -->
         <service
             android:name="cn.jpush.android.service.PushService"
-            android:enabled="true"
-            android:exported="false">
+            android:enabled="true">
             <intent-filter>
                 <action android:name="cn.jpush.android.intent.REGISTER" />
                 <action android:name="cn.jpush.android.intent.REPORT" />

@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.revenant.shipper.ui.activity.MineActivity">
+    tools:context="com.revenant.shipper.ui.activity.MineDriverActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -22,15 +22,16 @@
                 android:id="@+id/mine_personal_image"
                 android:layout_width="90dp"
                 android:layout_height="90dp"
+                android:src="@mipmap/picture"
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="10dp"
-                android:src="@mipmap/tes"></ImageView>
+                ></ImageView>
 
             <RelativeLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignTop="@id/mine_personal_image"
-                android:layout_marginLeft="35dp"
+                android:layout_marginLeft="25dp"
                 android:layout_toRightOf="@id/mine_personal_image">
 
                 <LinearLayout
@@ -39,6 +40,7 @@
                     android:orientation="horizontal">
 
                     <TextView
+                        android:id="@+id/phone_num"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginRight="15dp"
@@ -47,6 +49,7 @@
                         android:textSize="20sp"></TextView>
 
                     <TextView
+                        android:id="@+id/personal_status"
                         style="@style/mine_authentication_okstyle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -56,15 +59,17 @@
             </RelativeLayout>
 
             <TextView
+                android:id="@+id/edit_personal_info"
                 style="@style/mine_authentication_nostyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignBottom="@id/mine_personal_image"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="20dp"
                 android:layout_toRightOf="@id/mine_personal_image"
                 android:text="编辑资料 >"></TextView>
 
             <ImageView
+                android:id="@+id/big_back"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
@@ -74,10 +79,12 @@
         </RelativeLayout>
 
         <RelativeLayout
+            android:id="@+id/improve_driver_info_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:layout_marginBottom="8dp"
+            android:visibility="gone"
             android:background="@color/mine_warn_authentication_color"
             android:paddingTop="5dp"
             android:paddingBottom="5dp">
@@ -177,6 +184,7 @@
                         android:orientation="vertical">
 
                         <TextView
+                            android:id="@+id/mybacket_text"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginBottom="10dp"
@@ -186,9 +194,11 @@
                             android:textStyle="italic"></TextView>
 
                         <TextView
+                            android:id="@+id/show_money_click"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:drawableRight="@mipmap/hide"
+                            android:drawablePadding="5dp"
                             android:gravity="center_vertical"
                             android:text="余额(元) "
                             android:textSize="15sp"></TextView>
@@ -199,7 +209,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"
@@ -224,7 +235,8 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:visibility="gone">
 
                         <TextView
                             android:layout_width="wrap_content"

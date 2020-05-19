@@ -9,9 +9,6 @@ import com.google.android.material.tabs.TabLayout;
 import com.revenant.shipper.R;
 import com.revenant.shipper.adapter.NewMainAdapter;
 import com.revenant.shipper.base.BaseActivity;
-import com.revenant.shipper.ui.fragment.AssignmentFragment;
-import com.revenant.shipper.ui.fragment.NetworkingFragment;
-import com.revenant.shipper.ui.fragment.PlatformFragment;
 import com.revenant.shipper.ui.fragment.SuggestionHistoryFragment;
 import com.revenant.shipper.ui.fragment.SuggestionWriteFragment;
 
@@ -28,7 +25,7 @@ public class SuggestionsActivity extends BaseActivity {
     ViewPager viewpagersuggestions;
 
     private List<Fragment> fragmentList;
-    private List<String> titleList;
+    private List<String>   titleList;
     private NewMainAdapter newMainAdapter;
 
     @Override

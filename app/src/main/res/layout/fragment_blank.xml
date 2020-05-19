@@ -2,7 +2,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.revenant.shipper.ui.fragment.BlankFragment">
+    tools:context="com.revenant.driver.com.revenant.shipper.ui.fragment.BlankFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <LinearLayout

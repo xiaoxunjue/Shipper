@@ -6,7 +6,7 @@ import com.revenant.shipper.base.BaseActivity;
 public class InitActivity extends BaseActivity {
     @Override
     public int getContentViewResId() {
-        return R.layout.activity_init;
+        return R.layout.activity_inita;
     }
 
     @Override

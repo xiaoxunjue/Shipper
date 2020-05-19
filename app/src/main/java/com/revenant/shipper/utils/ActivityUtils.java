@@ -47,7 +47,7 @@ public class ActivityUtils {
             return null;
         }
     }
-    public void returnToActivity(Class<?> cls) {
+    public static void returnToActivity(Class<?> cls) {
         while (mActivityStack.size() != 0)
             if (mActivityStack.peek().getClass() == cls) {
                 break;
@@ -89,6 +89,7 @@ public class ActivityUtils {
             }
         }
     }
+
 
     /**
      * 将一个Fragment添加到Activity中

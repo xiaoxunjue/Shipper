@@ -3,6 +3,7 @@ package com.revenant.shipper.adapter;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.revenant.shipper.R;
+
 import com.revenant.shipper.bean.BigItemBean;
 
 /**

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,44 +8,41 @@
     tools:context="com.revenant.shipper.ui.activity.NoIdentificationActivity">
 
     <LinearLayout
-        android:id="@+id/basetitle_show_or_hide"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/bar_bg_color"
-        android:minHeight="?attr/actionBarSize">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
 
-        <FrameLayout
+        >
+
+        <include layout="@layout/new_title_bar"></include>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/nologinrecyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+
+        <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/o2oman"
-            android:orientation="horizontal"
-            android:paddingTop="20dp"
-            android:paddingBottom="10dp">
-
-            <ImageView
-                android:id="@+id/left_base"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_alignTop="@id/center_base_bar_title"
-                android:layout_alignParentLeft="true"
-                android:paddingLeft="13dp"
-                android:paddingRight="10dp"
-                android:src="@mipmap/me" />
-
-
-            <ImageView
-                android:id="@+id/right_base"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="right"
-                android:paddingRight="10dp"
-                android:src="@mipmap/message"></ImageView>
-        </FrameLayout>
+            android:text="测试"
+            android:visibility="gone"
+            android:id="@+id/testshare"
+            >   </Button>
     </LinearLayout>
 
-    <include layout="@layout/item_noidentification"></include>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/nologinpublishbotton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="10dp"
+        android:backgroundTint="@color/flaot_publish_goods_color"
+        android:scaleType="center"
+        android:src="@mipmap/levitate_button_waybill"
+        app:borderWidth="0dp"
+        app:fabSize="normal"
+        app:maxImageSize="@dimen/def_height"
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
-</LinearLayout>
+        />
+
+</FrameLayout>

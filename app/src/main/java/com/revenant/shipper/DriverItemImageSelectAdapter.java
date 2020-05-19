@@ -1,10 +1,8 @@
 package com.revenant.shipper;
 
-import android.widget.EditText;
-
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
-import com.revenant.shipper.bean.Driver_edit_item;
+import com.revenant.shipper.R;
 import com.revenant.shipper.bean.Driver_improve_info_image_select;
 
 /**

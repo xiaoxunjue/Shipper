@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.MaterialToolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bar_bg_color">
+
+    <LinearLayout
+        android:id="@+id/basetitle_show_or_hide"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/bar_bg_color"
+        android:minHeight="?attr/actionBarSize">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/o2oman"
+            android:orientation="horizontal"
+            android:paddingTop="25dp"
+            android:paddingBottom="10dp">
+
+            <ImageView
+                android:id="@+id/left_base"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@id/center_base_bar_title"
+                android:layout_alignParentLeft="true"
+                android:paddingLeft="13dp"
+                android:paddingRight="10dp"
+                android:src="@mipmap/me" />
+
+
+            <ImageView
+                android:id="@+id/right_base"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:paddingRight="10dp"
+                android:src="@mipmap/message"></ImageView>
+        </FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/networkshow"
+            android:visibility="gone"
+            android:background="@color/white">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginBottom="5dp"
+                android:background="@color/netbgcolor"
+                android:paddingTop="10dp"
+                android:text="网 络 状 态 异 常"
+                android:gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:paddingBottom="10dp">
+            </TextView>
+        </LinearLayout>
+    </LinearLayout>
+</com.google.android.material.appbar.MaterialToolbar>

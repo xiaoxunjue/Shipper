@@ -19,8 +19,6 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-import butterknife.BindView;
-
 /**
  * A simple {@link Fragment} subclass.
  */
@@ -29,8 +27,8 @@ public class SuggestionWriteFragment extends Fragment {
 
     private SuggestionItemAdapter suggestionItemAdapter;
 
-    private List<String> suggestions = Arrays.asList("功能异常", "体验建议", "新功能建议", "诚信分相关", "评价相关", "其他");
-    private List<SuggestionTypeTextBean> beanList = new ArrayList<>();
+    private List<String>                 suggestions = Arrays.asList("功能异常", "体验建议", "新功能建议", "诚信分相关", "评价相关", "其他");
+    private List<SuggestionTypeTextBean> beanList    = new ArrayList<>();
 
     public SuggestionWriteFragment() {
         // Required empty public constructor

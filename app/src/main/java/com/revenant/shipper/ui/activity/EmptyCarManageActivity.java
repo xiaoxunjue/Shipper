@@ -50,4 +50,10 @@ public class EmptyCarManageActivity extends BaseActivity {
             default:
         }
     }
+
+    @Override
+    public void leftbarclick() {
+        super.leftbarclick();
+        finish();
+    }
 }

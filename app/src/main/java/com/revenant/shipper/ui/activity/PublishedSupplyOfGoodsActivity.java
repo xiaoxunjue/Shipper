@@ -1,21 +1,18 @@
 package com.revenant.shipper.ui.activity;
 
 import android.os.Bundle;
+import android.view.WindowManager;
 
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
 import com.google.android.material.tabs.TabLayout;
 import com.revenant.shipper.R;
 import com.revenant.shipper.adapter.NewMainAdapter;
 import com.revenant.shipper.base.BaseActivity;
-import com.revenant.shipper.ui.fragment.AssignmentFragment;
 import com.revenant.shipper.ui.fragment.ConversantVehicleDesignateFragment;
 import com.revenant.shipper.ui.fragment.ConversantVehicleGroupFragment;
-import com.revenant.shipper.ui.fragment.NetworkingFragment;
 import com.revenant.shipper.ui.fragment.NetworkingPublishFragment;
-import com.revenant.shipper.ui.fragment.PlatformFragment;
 import com.revenant.shipper.ui.fragment.PublishPlatformFragment;
 
 import java.util.ArrayList;
@@ -34,6 +31,7 @@ public class PublishedSupplyOfGoodsActivity extends BaseActivity {
     private List<Fragment> fragmentList = new ArrayList<>();
 
     private NewMainAdapter newMainAdapter;
+    private int selectDeauft = 1;
 
     @Override
     public int getContentViewResId() {
@@ -42,6 +40,7 @@ public class PublishedSupplyOfGoodsActivity extends BaseActivity {
 
     @Override
     public void initView() {
+//        getWindow().setSoftInputMode(WindowManager.LayoutParams.SOFT_INPUT_ADJUST_PAN);
 
     }
 

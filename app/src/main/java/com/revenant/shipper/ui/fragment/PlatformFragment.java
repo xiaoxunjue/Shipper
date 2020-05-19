@@ -38,9 +38,9 @@ public class PlatformFragment extends BaseFragment {
     private NewMainAdapter newMainAdapter;
 
     private AreaItemAdapter areaItemAdapter;
-    private int areatype = 0; // areatype=0,省，1市，2区
-    private int areaposition = 0;
-    private String areainfo;
+    private int             areatype = 0; // areatype=0,省，1市，2区
+    private int             areaposition = 0;
+    private String          areainfo;
 
     private AreaSelectItemAdapter areaSelectItemAdapter;
 

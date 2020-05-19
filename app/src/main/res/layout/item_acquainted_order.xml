@@ -5,7 +5,7 @@
     android:orientation="vertical">
 
     <LinearLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="5dp"
         android:background="@color/white"
@@ -17,6 +17,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
+            android:id="@+id/select_group"
             android:drawableRight="@mipmap/group"
             android:paddingLeft="10dp"></RadioButton>
 
@@ -25,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="25dp"
-            android:text="111111"
+            android:id="@+id/group_item_name"
             android:textColor="@color/black"
             android:textSize="25sp"></TextView>
     </LinearLayout>

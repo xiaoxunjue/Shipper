@@ -12,42 +12,37 @@
         android:paddingTop="10dp">
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/startingplace"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="3"
                 android:text="辽宁省鞍山市千山区"
                 android:textColor="@color/black"
                 android:textStyle="italic"></TextView>
 
             <ImageView
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="5dp"
+                android:layout_weight="1"
                 android:src="@mipmap/arrow"></ImageView>
 
             <TextView
                 android:id="@+id/endingplace"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="3"
                 android:text="辽宁省鞍山市千山区"
                 android:textColor="@color/black"
                 android:textStyle="italic"></TextView>
         </LinearLayout>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:text="辽A N82P0"
-            android:textColor="@color/login_no_authentication_cardcolor"
-            android:textStyle="bold"></TextView>
     </RelativeLayout>
 
     <RelativeLayout
@@ -56,19 +51,38 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="10dp">
 
-        <TextView
+        <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
             android:layout_centerVertical="true"
-            android:text="普通货车"
-            android:textColor="@color/bottom_select_text"
-            android:textStyle="bold"></TextView>
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/car_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:ems="6"
+                android:text="辽A N82P0"
+                android:textColor="@color/login_no_authentication_cardcolor"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/car_info"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="普通货车"
+                android:textColor="@color/bottom_select_text"
+                android:textStyle="bold"></TextView>
+        </LinearLayout>
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:id="@+id/nologinphone"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
             android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             android:src="@mipmap/phone"></ImageView>
     </RelativeLayout>
 

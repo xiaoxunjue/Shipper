@@ -10,6 +10,7 @@
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tablayoutorder"
         android:layout_width="match_parent"
+        app:tabMode="scrollable"
         android:layout_height="wrap_content">
 
     </com.google.android.material.tabs.TabLayout>

@@ -222,125 +222,15 @@
                         </LinearLayout>
                     </LinearLayout>
 
-                    <RelativeLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:paddingTop="20dp"
-                        android:paddingBottom="30dp">
-
-                        <LinearLayout
-                            android:id="@+id/show_driver_info"
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentLeft="true"
-
-                            android:layout_marginLeft="10dp"
-                            android:orientation="horizontal">
-
-                            <ImageView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_gravity="center_vertical"
-                                android:src="@mipmap/picture">
-
-                            </ImageView>
-
-                            <LinearLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="20dp"
-                                android:orientation="vertical">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="20dp"
-                                    android:text="赵师傅"
-                                    android:textColor="@color/black"
-                                    android:textSize="20sp"></TextView>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_marginBottom="20dp"
-                                    android:drawableLeft="@mipmap/shipper_level"
-                                    android:gravity="bottom"
-                                    android:text="10级"
-                                    android:textColor="@color/bottom_select_text"></TextView>
-                            </LinearLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_alignParentRight="true"
-                            android:layout_marginRight="10dp"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="查看简介 >"></TextView>
-
-                            <FrameLayout
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content">
-
-                                <ImageView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:src="@mipmap/shipper_star"></ImageView>
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_gravity="center"
-                                    android:text="8.5分"
-                                    android:textColor="@color/bottom_select_text"></TextView>
-                            </FrameLayout>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:layout_below="@id/show_driver_info"
-                            android:layout_centerHorizontal="true"
-                            android:orientation="horizontal">
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="接单 "
-                                android:textSize="15sp"></TextView>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="1,231"
-                                android:textSize="15sp"></TextView>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginLeft="20dp"
-                                android:text="评价 "
-                                android:textSize="15sp"></TextView>
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:text="1,231"
-                                android:textSize="15sp"></TextView>
-                        </LinearLayout>
-                    </RelativeLayout>
+                    <include layout="@layout/item_driver_info"></include>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
 
             <Button
                 style="@style/login_btn_style_default"
                 android:layout_width="match_parent"
-                android:layout_gravity="bottom"
                 android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
                 android:text="发布空车"></Button>
         </LinearLayout>
     </androidx.core.widget.NestedScrollView>

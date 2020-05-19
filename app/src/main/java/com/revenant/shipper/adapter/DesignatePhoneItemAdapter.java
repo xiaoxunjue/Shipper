@@ -2,18 +2,19 @@ package com.revenant.shipper.adapter;
 
 import android.text.TextUtils;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.RadioButton;
 import android.widget.SectionIndexer;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.revenant.shipper.R;
 import com.revenant.shipper.bean.PersonData;
 
-import java.util.List;
 
-import butterknife.BindView;
+import java.util.List;
 
 /**
  * @ProjectName: Shipper
@@ -39,6 +40,8 @@ public class DesignatePhoneItemAdapter extends BaseQuickAdapter<PersonData, Base
     protected void convert(BaseViewHolder helper, PersonData item) {
         helper.setText(R.id.designate_nickname, item.getName());
         helper.setText(R.id.designate_telephone, item.getTel());
+        Glide.with(mContext).load(item.getPhotourl()).placeholder(R.mipmap.person).centerCrop().
+                into((ImageView) helper.getView(R.id.shucheimage));
         TextView tvLetter = helper.getView(R.id.type_tv);
         RadioButton designateRadion = helper.getView(R.id.designate_radion);
         if (item.isIsselect()) {
@@ -47,10 +50,10 @@ public class DesignatePhoneItemAdapter extends BaseQuickAdapter<PersonData, Base
             designateRadion.setChecked(false);
         }
         helper.addOnClickListener(R.id.designate_radion);
+
+
         int position = helper.getLayoutPosition();
-        //根据position获取分类的首字母的Char ascii值
         int section = getSectionForPosition(position);
-        //如果当前位置等于该分类首字母的Char的位置 ，则认为是第一次出现
         if (position == getPositionForSection(section)) {
             tvLetter.setVisibility(View.VISIBLE);
             String letterFirst = item.getLetters();
@@ -96,7 +99,9 @@ public class DesignatePhoneItemAdapter extends BaseQuickAdapter<PersonData, Base
     }
 
     public int getCount() {
-        if (list != null) return list.size();
+        if (list != null) {
+            return list.size();
+        }
         return 0;
     }
 }

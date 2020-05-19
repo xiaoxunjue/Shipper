@@ -1,12 +1,10 @@
 package com.revenant.shipper.adapter;
 
-import android.view.View;
 import android.widget.TextView;
 
 import com.chad.library.adapter.base.BaseQuickAdapter;
 import com.chad.library.adapter.base.BaseViewHolder;
 import com.revenant.shipper.R;
-import com.revenant.shipper.bean.AreaShowBean;
 import com.revenant.shipper.bean.SuggestionTypeTextBean;
 
 /**

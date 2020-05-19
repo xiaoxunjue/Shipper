@@ -9,10 +9,7 @@ import com.google.android.material.tabs.TabLayout;
 import com.revenant.shipper.R;
 import com.revenant.shipper.adapter.NewMainAdapter;
 import com.revenant.shipper.base.BaseActivity;
-import com.revenant.shipper.ui.fragment.AssignmentFragment;
-import com.revenant.shipper.ui.fragment.NetworkingFragment;
 import com.revenant.shipper.ui.fragment.PersonalFragment;
-import com.revenant.shipper.ui.fragment.PlatformFragment;
 import com.revenant.shipper.ui.fragment.SysNewsFragment;
 
 import java.util.ArrayList;
@@ -22,14 +19,15 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 
 public class NewsActivity extends BaseActivity {
-    @BindView(R.id.tablayoutnews)
+
+
+    @BindView(R.id.publishtablayout)
     TabLayout tablayoutnews;
-    @BindView(R.id.viewpagernews)
+    @BindView(R.id.publishviewpager)
     ViewPager viewpagernews;
     private List<Fragment> fragmentList;
     private List<String> titleList;
     private NewMainAdapter newMainAdapter;
-
     @Override
     public int getContentViewResId() {
         return R.layout.activity_news;
@@ -56,7 +54,7 @@ public class NewsActivity extends BaseActivity {
 //
         viewpagernews.setAdapter(newMainAdapter);
         tablayoutnews.setupWithViewPager(viewpagernews);
-        setcenterTitle("意见建议");
+        setcenterTitle("消息");
 
     }
 
@@ -72,4 +70,5 @@ public class NewsActivity extends BaseActivity {
         // TODO: add setContentView(...) invocation
         ButterKnife.bind(this);
     }
+
 }

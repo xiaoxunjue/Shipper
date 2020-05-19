@@ -6,6 +6,7 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
 
     <style name="MatchMatch">
@@ -21,6 +22,18 @@
     <style name="login_btn_style_default">
         <item name="android:layout_marginTop">20dp</item>
         <item name="android:background">@color/login_btn_color</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginRight">10dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+        <item name="android:layout_marginBottom">20dp</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+
+    <style name="login_red_btn_style_default">
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:background">@color/red</item>
         <item name="android:textColor">@color/white</item>
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
@@ -127,6 +140,16 @@
         <item name="android:background">@drawable/edit_empty_car</item>
     </style>
 
+    <style name="blue_empty_car">
+        <item name="android:textColor">@color/blue</item>
+        <item name="android:background">@drawable/blue_bg</item>
+    </style>
+
+    <style name="gray_empty_car">
+        <item name="android:textColor">@color/tab_select_news_color</item>
+        <item name="android:background">@drawable/gray_bg</item>
+    </style>
+
     <style name="mine_template_btn">
         <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingTop">5dp</item>
@@ -136,4 +159,44 @@
         <item name="android:layout_marginLeft">10dp</item>
     </style>
 
+    <style name="red_bg_white_text">
+        <item name="android:background">@drawable/red_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="blue_bg_white_text">
+        <item name="android:background">@drawable/blue_btn</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="blue_border_blue_text">
+        <item name="android:background">@drawable/blue_border_btn</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="gray_border_gray_text">
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingRight">5dp</item>
+        <item name="android:background">@drawable/gray_border_btn</item>
+    </style>
+
+    <style name="load_dialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.6</item>
+    </style>
 </resources>
